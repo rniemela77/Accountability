@@ -12,3 +12,7 @@
 
 - "start": "nodemon server.js" (starts server (on Heroku))
 - "dev": "nodemon server.js" (starts server locally)
+
+## Postman
+
+- When developing, use Postman to test the API
