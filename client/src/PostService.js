@@ -1,7 +1,7 @@
 // Handle all requests. Will reference this from the component
 import axios from "axios";
 
-const url = "http://localhost:5000/api/posts";
+const url = "/api/posts";
 
 class PostService {
   // Get Posts
