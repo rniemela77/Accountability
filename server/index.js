@@ -14,6 +14,15 @@ const posts = require("./routes/api/posts");
 // Any route that goes to this path will be directed to `posts`
 app.use("/api/posts", posts);
 
+// Handle production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static(__dirname + "/public"));
+
+  // Handle SPA
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
+}
+
 // On Heroku, use PORT. On localhost, use 5000
 const port = process.env.PORT || 5000;
 
