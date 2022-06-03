@@ -16,6 +16,8 @@ app.use("/api/posts", posts);
 
 // Handle production
 if (process.env.NODE_ENV === "production") {
+  console.log("App started in production mode");
+
   // Static folder
   app.use(express.static(__dirname + "/public/"));
 
